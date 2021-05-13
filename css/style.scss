@@ -1,0 +1,412 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+/*************mixins***************/
+
+@mixin flexy($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+/*************mixins***************/
+
+/*************variables*******/
+
+$primary-color: #01bcae;
+$dark-color: #333333;
+$primary-font: "Montserrat", sans-serif;
+
+/**********variables*****/
+
+/***********header**************/
+.heading {
+  width: 100%;
+  height: 100vh;
+  // background-color: aquamarine;
+  @include flexy(space-between, center);
+
+  .inner-heading {
+    width: 80%;
+    height: 220px;
+    margin: 0 auto;
+    //background-color: azure;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: letter 1s linear;
+    @keyframes letter {
+      0% {
+        width: 0%;
+      }
+      25% {
+        width: 20%;
+      }
+      50% {
+        width: 40%;
+      }
+      75% {
+        width: 60%;
+      }
+      100% {
+        width: 80%;
+      }
+    }
+
+    h1 {
+      color: $dark-color;
+      font-size: 4vw;
+      font-family: $primary-font;
+      font-weight: 700;
+      margin-bottom: 25px;
+
+      span {
+        color: $primary-color;
+      }
+    }
+    .btn {
+      position: relative;
+      text-align: left;
+      font-size: 20px;
+      color: $primary-color;
+      font-family: $primary-font;
+      cursor: pointer;
+      font-weight: 700;
+      padding: 8px 10px;
+      width: 150px;
+      background-color: #ffffff;
+      border: 2px solid $primary-color;
+      border-radius: 2px;
+
+      &::after {
+        content: "Know More";
+        position: absolute;
+        color: #fff;
+        font-family: $primary-font;
+        font-weight: 700;
+        @include flexy(center, center);
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: $primary-color;
+        clip-path: circle(0% at 0% 100%);
+        transition: all 0.2s ease;
+      }
+      &:hover::after {
+        clip-path: circle(140% at 0% 100%);
+      }
+    }
+  }
+}
+/***********header**************/
+
+/******************about section***********/
+.about {
+  width: 100%;
+  min-height: 600px;
+  background-color: $primary-color;
+  text-align: center;
+  padding: 40px 0;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+  h1 {
+    color: #fff;
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    font-family: $primary-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .container {
+    // border: 1px solid black;
+
+    .row {
+      .card2 {
+        @include flexy(center, center);
+        img {
+          width: 300px;
+          border-radius: 3px;
+          box-shadow: 0 0 16px 0 rgba($color: #000000, $alpha: 0.2);
+        }
+      }
+      .card {
+        width: 520px;
+        height: 420px;
+        // background-color: blue;
+        margin: 10px 10px;
+        text-align: left;
+        font-family: $primary-font;
+        color: #fff;
+        p {
+          margin-top: 10px;
+          font-size: 20px;
+          line-height: 25px;
+          font-weight: 300;
+          margin-bottom: 20px;
+        }
+        .btn {
+          position: relative;
+          text-align: center;
+          font-size: 20px;
+          color: #fff;
+          font-family: $primary-font;
+          cursor: pointer;
+          font-weight: 700;
+          padding: 8px 10px;
+          width: 150px;
+          background-color: $primary-color;
+          border: 2px solid #fff;
+          border-radius: 2px;
+
+          &::after {
+            content: "Resume";
+            position: absolute;
+            color: $primary-color;
+            font-family: $primary-font;
+            font-weight: 700;
+            @include flexy(center, center);
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+
+            background-color: #fff;
+            clip-path: circle(0% at 0% 100%);
+            transition: all 0.2s ease;
+          }
+          &:hover::after {
+            clip-path: circle(144% at 0% 100%);
+          }
+        }
+      }
+    }
+  }
+}
+/*************about section**************/
+
+/****************project section***********/
+.project {
+  width: 100%;
+  height: auto;
+  // background-color: aqua;
+  margin-top: 100px;
+
+  .container {
+    // border: 1px solid black;
+
+    .pro-heading {
+      text-align: center;
+      h1 {
+        color: $dark-color;
+        font-size: 2.6rem;
+        font-family: $primary-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+    }
+    .row {
+      display: flex;
+      margin: 100px 0;
+      .card1 {
+        width: 470px;
+        min-height: 350px;
+        margin: 20px;
+        // background-color: coral;
+
+        h2 {
+          font-family: $primary-font;
+          font-weight: 700;
+          color: $dark-color;
+          // margin: 30px 0;
+        }
+        p {
+          margin-top: 20px;
+          font-family: $primary-font;
+          font-weight: 500;
+          color: $dark-color;
+          line-height: 25px;
+        }
+
+        .buttons {
+          margin-top: 20px;
+          .btn {
+            position: relative;
+            text-align: center;
+            font-size: 20px;
+            color: $primary-color;
+            font-family: $primary-font;
+            cursor: pointer;
+            font-weight: 700;
+            padding: 8px 10px;
+            width: 150px;
+            background-color: #fff;
+            border: 2px solid $primary-color;
+            border-radius: 2px;
+
+            &::after {
+              content: "See Live";
+              position: absolute;
+              color: #fff;
+              font-family: $primary-font;
+              font-weight: 700;
+              @include flexy(center, center);
+              top: 0%;
+              left: 0%;
+              width: 100%;
+              height: 100%;
+
+              background-color: $primary-color;
+              clip-path: circle(0% at 0% 100%);
+              transition: all 0.2s ease;
+            }
+            &:hover::after {
+              clip-path: circle(144% at 0% 100%);
+            }
+          }
+          a {
+            text-decoration: none;
+            color: $primary-color;
+            font-family: $primary-font;
+            font-weight: 700;
+            margin-left: 20px;
+          }
+        }
+      }
+      .card2 {
+        width: 600px;
+        height: 380px;
+        //  background-color: coral;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 3px;
+          box-shadow: 0 0 16px 0 rgba($color: #000000, $alpha: 0.2);
+        }
+      }
+    }
+  }
+}
+/****************project section***********/
+
+/***********contact section*********************/
+.contact {
+  width: 100%;
+  height: 300px;
+  margin-top: 100px;
+  background-color: $primary-color;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  @include flexy(center, center);
+  flex-direction: column;
+  h1 {
+    color: #fff;
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    font-family: $primary-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: $primary-font;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 8px 10px;
+    width: 220px;
+    background-color: $primary-color;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 16px 0 rgba($color: #000000, $alpha: 0.2);
+
+    &::after {
+      content: "Call To Action";
+      position: absolute;
+      color: $primary-color;
+      font-family: $primary-font;
+      font-weight: 700;
+      @include flexy(center, center);
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+
+      background-color: #fff;
+      clip-path: circle(0% at 0% 100%);
+      transition: all 0.2s ease;
+    }
+    &:hover::after {
+      clip-path: circle(144% at 0% 100%);
+    }
+  }
+}
+/***********contact section*********************/
+
+/********************footer*********************/
+.footer {
+  width: 100%;
+  height: 300px;
+  background-color: $dark-color;
+  padding: 60px 0;
+
+  .inner-footer {
+    width: 50%;
+    height: 180px;
+    //background-color: royalblue;
+    margin: 0 auto;
+    @include flexy(center, center);
+    flex-direction: column;
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin: 0 25px;
+        //  background-color: aqua;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 30px;
+          transition: font-size 0.2s ease;
+          &:hover {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+    .line {
+      width: 70%;
+      height: 2px;
+      background-color: #615f5c;
+    }
+    p {
+      color: #615f5c;
+      font-family: $primary-font;
+      margin-top: 20px;
+
+      a {
+        text-decoration: none;
+        color: #615f5c;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+/********************footer*********************/

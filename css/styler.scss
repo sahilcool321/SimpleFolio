@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*************mixins***************/
+
+@mixin flexy($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+/*************mixins***************/
+
+/*************variables*******/
+
+$primary-color: #01bcae;
+$dark-color: #272341;
+$primary-font: "Montserrat", sans-serif;
+
+/**********variables*****/
+
+/*********header************/
+
+header {
+  width: 100%;
+  height: 50px;
+  @include flexy(space-between, center);
+  padding: 0 10rem;
+
+  h5 {
+    font-size: 20px;
+    color: $dark-color;
+    font-family: $primary-font;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      padding: 0px 10px;
+
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        color: $dark-color;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+.header {
+  width: 100%;
+  height: 200px;
+  background-color: $primary-color;
+  @include flexy(center, center);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+  .heading {
+    width: 380px;
+    height: 60px;
+    // background-color: aliceblue;
+
+    h2 {
+      font-size: 50px;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 0 7px #a9a4a4;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+  }
+}
+
+/*********header************/
+
+/***********education*******/
+
+.education {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  color: $primary-color;
+  font-family: $primary-font;
+  background-color: #fcf8f7;
+
+  h2 {
+    letter-spacing: 2px;
+  }
+  .edu-details {
+    color: $dark-color;
+    margin: 20px 0px;
+    @include flexy(space-between, center);
+
+    h4 {
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/********education********/
+
+/***************projects************/
+
+.projects {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  font-family: $primary-font;
+  background-color: #fcf8f7;
+
+  h2 {
+    color: $primary-color;
+    letter-spacing: 2px;
+  }
+  .heading {
+    color: $dark-color;
+    margin: 20px 0px;
+    @include flexy(space-between, center);
+  }
+  ul {
+    padding: 0 40px;
+    line-height: 30px;
+
+    li {
+      color: $dark-color;
+      font-family: $primary-font;
+    }
+  }
+}
+
+/***************projects************/
+
+/***********skills*************/
+
+.skills {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  font-family: $primary-font;
+  background-color: #fcf8f7;
+
+  h2 {
+    color: $primary-color;
+    font-family: $primary-font;
+    letter-spacing: 2px;
+  }
+
+  .skill-set {
+    width: 90%;
+    height: auto;
+    //  background-color: slategrey;
+    //  border: 1px solid black;
+    margin: 10px 10px;
+    color: $dark-color;
+    font-family: $primary-font;
+
+    h4 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: -25px;
+      padding: 0 14rem;
+      line-height: 25px;
+    }
+  }
+}
+
+/***********skills***********************/
+
+/**********************Extracurricular Activities*************/
+
+.extra-activity {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  color: $primary-color;
+  font-family: $primary-font;
+  background-color: #fcf8f7;
+  h2 {
+    letter-spacing: 2px;
+  }
+  .heading {
+    color: $dark-color;
+    margin: 20px 0px;
+    @include flexy(space-between, center);
+  }
+  ul {
+    padding: 0 40px;
+    line-height: 30px;
+
+    li {
+      color: $dark-color;
+      font-family: $primary-font;
+    }
+  }
+}
+
+/**********************Extracurricular Activities*************/
+
+/*************Awards*******************/
+
+.honour {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  color: $primary-color;
+  font-family: $primary-font;
+  background-color: #fcf8f7;
+  h2 {
+    letter-spacing: 2px;
+  }
+  .content {
+    color: $dark-color;
+    padding: 20px 40px;
+
+    ul {
+      line-height: 30px;
+    }
+  }
+}
+
+/*************Awards*******************/
+
+/*********************footer***********/
+
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  height: 200px;
+  background-color: $primary-color;
+  @include flexy(center, center);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+
+  .other-links {
+    width: 90%;
+    height: 100px;
+    @include flexy(space-evenly, center);
+    //  background-color: snow;
+
+    h3 {
+      a {
+        text-decoration: none;
+        color: $dark-color;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-family: $primary-font;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/*********************footer***********/

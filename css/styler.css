@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*************mixins***************/
+/*************mixins***************/
+/*************variables*******/
+/**********variables*****/
+/*********header************/
+header {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10rem;
+}
+
+header h5 {
+  font-size: 20px;
+  color: #272341;
+  font-family: "Montserrat", sans-serif;
+}
+
+header ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul li {
+  padding: 0px 10px;
+}
+
+header ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #272341;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #01bcae;
+}
+
+.header {
+  width: 100%;
+  height: 200px;
+  background-color: #01bcae;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.header .heading {
+  width: 380px;
+  height: 60px;
+}
+
+.header .heading h2 {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 7px #a9a4a4;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/*********header************/
+/***********education*******/
+.education {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  color: #01bcae;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fcf8f7;
+}
+
+.education h2 {
+  letter-spacing: 2px;
+}
+
+.education .edu-details {
+  color: #272341;
+  margin: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.education .edu-details h4 span {
+  font-size: 12px;
+}
+
+/********education********/
+/***************projects************/
+.projects {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fcf8f7;
+}
+
+.projects h2 {
+  color: #01bcae;
+  letter-spacing: 2px;
+}
+
+.projects .heading {
+  color: #272341;
+  margin: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects ul {
+  padding: 0 40px;
+  line-height: 30px;
+}
+
+.projects ul li {
+  color: #272341;
+  font-family: "Montserrat", sans-serif;
+}
+
+/***************projects************/
+/***********skills*************/
+.skills {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fcf8f7;
+}
+
+.skills h2 {
+  color: #01bcae;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+.skills .skill-set {
+  width: 90%;
+  height: auto;
+  margin: 10px 10px;
+  color: #272341;
+  font-family: "Montserrat", sans-serif;
+}
+
+.skills .skill-set h4 {
+  margin-bottom: 10px;
+}
+
+.skills .skill-set p {
+  margin-top: -25px;
+  padding: 0 14rem;
+  line-height: 25px;
+}
+
+/***********skills***********************/
+/**********************Extracurricular Activities*************/
+.extra-activity {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  color: #01bcae;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fcf8f7;
+}
+
+.extra-activity h2 {
+  letter-spacing: 2px;
+}
+
+.extra-activity .heading {
+  color: #272341;
+  margin: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.extra-activity ul {
+  padding: 0 40px;
+  line-height: 30px;
+}
+
+.extra-activity ul li {
+  color: #272341;
+  font-family: "Montserrat", sans-serif;
+}
+
+/**********************Extracurricular Activities*************/
+/*************Awards*******************/
+.honour {
+  width: 76%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 25px;
+  color: #01bcae;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fcf8f7;
+}
+
+.honour h2 {
+  letter-spacing: 2px;
+}
+
+.honour .content {
+  color: #272341;
+  padding: 20px 40px;
+}
+
+.honour .content ul {
+  line-height: 30px;
+}
+
+/*************Awards*******************/
+/*********************footer***********/
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  height: 200px;
+  background-color: #01bcae;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.footer .other-links {
+  width: 90%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .other-links h3 a {
+  text-decoration: none;
+  color: #272341;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer .other-links h3 a:hover {
+  color: #fff;
+}
+
+/*********************footer***********/
+/*# sourceMappingURL=styler.css.map */
